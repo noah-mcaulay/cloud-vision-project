@@ -3,25 +3,35 @@
 var apiKey = "AIzaSyAC4pDcXBTc8VmVRdtOfppmLBFtFm-t7xw";
 
 var CLOUD_VISION_URL = "https://vision.googleapis.com/v1/images:annotate?key=" + apiKey;
+
 var chart = null;
 
-$("#fileUpload").on('change', function(event) {
-    event.preventDefault();
+var fileInputElement = $('.fileinput');
 
-    console.log("clicked submit...");
+// get the file and process it if a new image is inputted
+fileInputElement.on('change.bs.fileinput', function() {
 
     // get file, convert to base64, and pass to the handleFile function when done
     var file = $("#fileUpload").prop("files")[0];
     var fileReader = new FileReader();
     fileReader.onloadend = handleFile;
     fileReader.readAsDataURL(file);
+
+});
+
+// remove the bar chart if the user removes their image
+fileInputElement.on('clear.bs.fileinput', function() {
+
+    // delete chart if it exists
+    if (chart !== null) {
+        chart.destroy();
+    }
+
 });
 
 function handleFile(event) {
 
     var image = event.target.result;
-
-    $("#fileDisplay").attr("src", image);
 
     image = image.replace("data:image/jpeg;base64,", ""); // remove jpeg header (if it exists)
     image = image.replace("data:image/png;base64,", "");  // remove png header (if it exists)
@@ -63,10 +73,10 @@ function generateChart(labels) {
         console.log(label["description"] + ": " + label["score"]);
     });
 
-    // get label descriptions and scores
+    // get label descriptions and scores (just the first 10)
     var descriptions = [];
     var scores = [];
-    labels.forEach(function(label) {
+    labels.slice(0, 10).forEach(function(label) {
         descriptions.push(label["description"]);
         scores.push((label["score"] * 100).toFixed(2));
     });
