@@ -18,7 +18,7 @@ a:hover,
 a:focus,
 a:active,
 a.active {
-  color: #4285F4;
+  color: #55bfff;
 }
 h1,
 h2,
@@ -53,7 +53,7 @@ hr.star-light {
   border-color: white;
 }
 hr.star-light:after {
-  background-color: #4285F4;
+  background-color: #55bfff;
   color: white;
 }
 hr.star-primary {
@@ -68,7 +68,7 @@ hr.star-primary:after {
 }
 header {
   text-align: center;
-  background: #4285F4;
+  background: #55bfff;
   color: white;
 }
 header .container {
@@ -125,7 +125,7 @@ header .intro-text .skills {
   color: white;
 }
 .navbar-custom .navbar-nav li a:hover {
-  color: #4285F4;
+  color: #55bfff;
 }
 .navbar-custom .navbar-nav li a:focus,
 .navbar-custom .navbar-nav li a:active {
@@ -133,13 +133,13 @@ header .intro-text .skills {
 }
 .navbar-custom .navbar-nav li.active a {
   color: white;
-  background: #4285F4;
+  background: #55bfff;
 }
 .navbar-custom .navbar-nav li.active a:hover,
 .navbar-custom .navbar-nav li.active a:focus,
 .navbar-custom .navbar-nav li.active a:active {
   color: white;
-  background: #4285F4;
+  background: #55bfff;
 }
 .navbar-custom .navbar-toggle {
   color: white;
@@ -149,9 +149,9 @@ header .intro-text .skills {
 }
 .navbar-custom .navbar-toggle:hover,
 .navbar-custom .navbar-toggle:focus {
-  background-color: #4285F4;
+  background-color: #55bfff;
   color: white;
-  border-color: #4285F4;
+  border-color: #55bfff;
 }
 @media (min-width: 768px) {
   .navbar-custom {
@@ -181,7 +181,7 @@ section h2 {
   font-size: 3em;
 }
 section.success {
-  background: #4285F4;
+  background: #55bfff;
   color: white;
 }
 @media (max-width: 767px) {
@@ -203,7 +203,7 @@ section.success {
   margin: 0 auto;
 }
 #portfolio .portfolio-item .portfolio-link .caption {
-  background: #4285F4;
+  background: #55bfff;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -284,7 +284,7 @@ section.success {
   opacity: 1;
 }
 .floating-label-form-group-with-focus label {
-  color: #4285F4;
+  color: #55bfff;
 }
 form .row:first-child .floating-label-form-group {
   border-top: 1px solid #eeeeee;
@@ -318,7 +318,7 @@ footer .footer-below {
 .btn-outline:focus,
 .btn-outline:active,
 .btn-outline.active {
-  color: #4285F4;
+  color: #55bfff;
   background: white;
   border: solid 2px white;
 }
@@ -366,8 +366,8 @@ fieldset[disabled] .btn-primary.active {
 }
 .btn-success {
   color: white;
-  background-color: #4285F4;
-  border-color: #4285F4;
+  background-color: #55bfff;
+  border-color: #55bfff;
   font-weight: 700;
 }
 .btn-success:hover,
@@ -376,8 +376,8 @@ fieldset[disabled] .btn-primary.active {
 .btn-success.active,
 .open .dropdown-toggle.btn-success {
   color: white;
-  background-color: #4285F4;
-  border-color: #4285F4;
+  background-color: #55bfff;
+  border-color: #55bfff;
 }
 .btn-success:active,
 .btn-success.active,
@@ -399,11 +399,11 @@ fieldset[disabled] .btn-success:active,
 .btn-success.disabled.active,
 .btn-success[disabled].active,
 fieldset[disabled] .btn-success.active {
-  background-color: #4285F4;
-  border-color: #4285F4;
+  background-color: #55bfff;
+  border-color: #55bfff;
 }
 .btn-success .badge {
-  color: #4285F4;
+  color: #55bfff;
   background-color: white;
 }
 .btn-social {
@@ -507,7 +507,7 @@ fieldset[disabled] .btn-success.active {
   position: absolute;
   left: 0px;
   top: 0px;
-  background: #4285F4;
+  background: #55bfff;
   outline: 0;
   transition: top 0.1s ease-in, background 0.5s linear;
 }
