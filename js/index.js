@@ -8,6 +8,11 @@ var chart = null;
 
 var fileInputElement = $('.fileinput');
 
+$(function() {
+   generatePieChart("labelPieChart", "orderedLabels.json");
+   //generatePieChart("orderedBreeds.json");
+});
+
 // get the file and process it if a new image is inputted
 fileInputElement.on('change.bs.fileinput', function() {
 
@@ -64,10 +69,10 @@ function queryCloudVisionApi(image) {
 function processResponse(response) {
     console.log(response);
     var labels = response["responses"][0]["labelAnnotations"];
-    generateChart(labels);
+    generateBarChart(labels);
 }
 
-function generateChart(labels) {
+function generateBarChart(labels) {
     console.log(labels);
     labels.forEach(function(label) {
         console.log(label["description"] + ": " + label["score"]);
@@ -129,4 +134,42 @@ function generateChart(labels) {
             }
         }
     });
+}
+
+function generatePieChart(targetID, filename) {
+    var labels = [];
+    var counts = [];
+
+    var colors = ["#3366CC", "#DC3912", "#FF9900", "#109618", "#990099", "#3B3EAC", "#0099C6", "#DD4477", "#66AA00", "#B82E2E"];
+
+    var pieData = [];
+
+    // get data from file
+    $.get("data/" + filename, function(data) {
+        data.slice(0, 10).forEach(function(entry) {
+           labels.push(entry[0]);
+           counts.push(entry[1]);
+        });
+
+        for (var i = 0; i < 10; ++i) {
+            pieData.push({
+               value: counts[i],
+               label: labels[i],
+               color: colors[i]
+            });
+        }
+
+        var pieChart = document.getElementById(targetID).getContext("2d");
+        var myPieChart = new Chart(pieChart, {
+            type: 'pie',
+            data: {
+                datasets: [{
+                    data: counts,
+                    backgroundColor: colors
+                }],
+                labels: labels
+            }
+        });
+    });
+
 }
