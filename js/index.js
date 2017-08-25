@@ -1,8 +1,6 @@
 'use strict';
 
-var apiKey = "AIzaSyAC4pDcXBTc8VmVRdtOfppmLBFtFm-t7xw";
-
-var CLOUD_VISION_URL = "https://vision.googleapis.com/v1/images:annotate?key=" + apiKey;
+var CLOUD_VISION_URL = "https://vision.googleapis.com/v1/images:annotate?key=" + "AIzaSyAC4pDcXBTc8VmVRdtOfppmLBFtFm-t7xw";
 
 var chart = null;
 
@@ -10,7 +8,7 @@ var fileInputElement = $('.fileinput');
 
 $(function() {
    generatePieChart("labelPieChart", "orderedLabels.json");
-   //generatePieChart("orderedBreeds.json");
+   generatePieChart("breedPieChart", "orderedBreeds.json");
 });
 
 // get the file and process it if a new image is inputted
@@ -97,7 +95,7 @@ function generateBarChart(labels) {
         return coordinates;
     };
 
-    var ctx = document.getElementById("chart").getContext("2d");
+    var ctx = document.getElementById("barChart").getContext("2d");
     chart = new Chart(ctx, {
         // The type of chart we want to create
         type: "horizontalBar",
