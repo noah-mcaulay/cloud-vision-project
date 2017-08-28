@@ -1,11 +1,4 @@
-.uploaded-img {
-    max-height:400px;
-    object-fit: cover;
-    width:auto;
-    background-color: #000000;
-}
-
 .spacing-bar {
-    height: 50px
+    height: 4em
 }
 
