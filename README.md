@@ -4,8 +4,11 @@ This is a project for CS410: Full Stack Web Dev which uses the Google Cloud Visi
 
 ## [Live Demo](http://noah-mcaulay.github.io/cloud-vision-project/)
 
-Click the link above to view a live demo of the website hosted with GitHub Pages.
-
+Click the link above to view a live demo of the website hosted by GitHub Pages.
 
 ## Resources
-The following resources were used to create this website:
+
+- [Bootstrap Freelancer Theme from Start Bootstrap](http://startbootstrap.com/template-overviews/freelancer/)
+- [Google Cloud Vision API](http://cloud.google.com/vision/)
+- [Reddit API Wrapper - Snoowrap](https://github.com/not-an-aardvark/snoowrap)
+- [xkcd Comic Parody](https://medium.com/google-cloud/using-the-google-cloud-vision-api-with-node-js-194e507afbd8)
