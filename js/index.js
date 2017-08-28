@@ -1,6 +1,6 @@
 'use strict';
 
-var CLOUD_VISION_URL = "https://vision.googleapis.com/v1/images:annotate?key=" + "AIzaSyAC4pDcXBTc8VmVRdtOfppmLBFtFm-t7xw";
+var CLOUD_VISION_URL = "https://vision.googleapis.com/v1/images:annotate?key=" + API_KEY;
 
 var chart = null;
 
