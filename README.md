@@ -4,7 +4,7 @@ This is a project for CS410: Full Stack Web Dev which uses the Google Cloud Visi
 
 ## [Live Demo](http://noah-mcaulay.github.io/cloud-vision-project/)
 
-Click the link above to view a live demo of the website hosted by GitHub Pages.
+Click the link above to view a live demo of the website hosted by GitHub Pages. Note that the Live Demo uses the Google Cloud Vision API key within key.js which may or may not exist. But, this key can be replaced with another one if desired.
 
 ## Resources
 
