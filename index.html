@@ -94,7 +94,7 @@
                     <h2>Image Labeling</h2>
                     <hr class="star-primary">
                     <p class="col-md-6 col-md-offset-3">Below is an area that allows you to send a single image to the Google Cloud Vision API, and then see the resulting labels.</p>
-                    <p class="col-md-4 col-md-offset-4">Try uploading your own image!</p>
+                    <p class="col-md-4 col-md-offset-4">Try uploading your own image by clicking the "Select image" button below!</p>
                 </div>
             </div>
 
@@ -124,19 +124,20 @@
                 <div class="col-lg-12 text-center">
                     <h2>/r/aww Analytics</h2>
                     <hr class="star-primary">
-                    <p class="col-md-6 col-md-offset-3">This section analyzes about 350 pictures that were posted to the /r/aww subreddit. </p>
-                    <p class="col-md-6 col-md-offset-3"></p>
+                    <p class="col-md-8 col-md-offset-2">This section analyzes about 350 pictures that were posted to the /r/aww subreddit. The pictures were acquired by using the Reddit API to grab the top 1000 links, and then only the links that ended with ".jpg" or ".png" were used for labeling.</p>
                 </div>
-            </div>
+                <div class="spacing-bar col-lg-12"></div>
             <div class="row">
-                <p class="col-md-6 col-md-offset-3">This is labels stuffs.</p>
                 <div class="col-md-8 col-lg-offset-2">
                     <canvas id="labelPieChart"></canvas>
+                    <p class="col-md-8 col-md-offset-2">This pie chart displays the most frequent raw labels that occurred within our data set.</p>
                 </div>
+                <div class="spacing-bar col-lg-12"></div>
             </div>
             <div class="row">
                 <div class="col-md-8 col-lg-offset-2">
                     <canvas id="breedPieChart"></canvas>
+                    <p class="col-md-8 col-md-offset-2">This pie chart displays the most frequent animal breeds that occurred within our labels.</p>
                 </div>
             </div>
         </div>

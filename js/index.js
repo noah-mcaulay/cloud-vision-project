@@ -6,6 +6,7 @@ var chart = null;
 
 var fileInputElement = $('.fileinput');
 
+// on page load generate the two pie charts from our data
 $(function() {
    generatePieChart("labelPieChart", "orderedLabels.json");
    generatePieChart("breedPieChart", "orderedBreeds.json");
@@ -32,6 +33,7 @@ fileInputElement.on('clear.bs.fileinput', function() {
 
 });
 
+// remove the image header from the base64 and pass the data to the cloud vision api handler
 function handleFile(event) {
 
     var image = event.target.result;
@@ -41,6 +43,7 @@ function handleFile(event) {
     queryCloudVisionApi(image);
 }
 
+// query the cloud vision api and get the response
 function queryCloudVisionApi(image) {
 
     var req = {
@@ -64,12 +67,13 @@ function queryCloudVisionApi(image) {
     }).done(processResponse);
 }
 
+// parse the labels from the response
 function processResponse(response) {
-    console.log(response);
     var labels = response["responses"][0]["labelAnnotations"];
     generateBarChart(labels);
 }
 
+// generate a bar chart of the labels we received
 function generateBarChart(labels) {
     console.log(labels);
     labels.forEach(function(label) {
@@ -89,8 +93,6 @@ function generateBarChart(labels) {
         chart.destroy();
     }
 
-    // set global font size
-    //Chart.defaults.global.defaultFontSize = 20;
     Chart.Tooltip.positioners.cursor = function(chartElements, coordinates) {
         return coordinates;
     };
@@ -134,6 +136,7 @@ function generateBarChart(labels) {
     });
 }
 
+// generate a pie chart at the targetID element based on the data within the specified file
 function generatePieChart(targetID, filename) {
     var labels = [];
     var counts = [];
