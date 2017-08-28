@@ -76,9 +76,6 @@ function processResponse(response) {
 // generate a bar chart of the labels we received
 function generateBarChart(labels) {
     console.log(labels);
-    labels.forEach(function(label) {
-        console.log(label["description"] + ": " + label["score"]);
-    });
 
     // get label descriptions and scores (just the first 10)
     var descriptions = [];
